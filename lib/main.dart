@@ -77,40 +77,7 @@ class UserProfilePage extends StatelessWidget {
       ],
     );
   }
-
-  Widget _ItemHeader(label){
-    TextStyle _emailLabelStyle2 = TextStyle(
-      color: Colors.black,
-      fontSize: 28.0,
-      fontWeight: FontWeight.bold,
-    );
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.spaceAround,
-      children: <Widget>[
-        Text(
-          label,
-          style: _emailLabelStyle2,
-        ),
-      ],
-    );
-  }
-  Widget _ItemBody(label){
-    TextStyle _emailLabelStyle2 = TextStyle(
-      color: Colors.black54,
-      fontSize: 24.0,
-      fontWeight: FontWeight.w100,
-    );
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.spaceAround,
-      children: <Widget>[
-        Text(
-          label,
-          style: _emailLabelStyle2,
-        ),
-      ],
-    );
-  }
-
+  
   Widget _namaewa(){
     TextStyle _namaeTextStyle = TextStyle(
       fontFamily: 'Roboto',
@@ -155,42 +122,6 @@ class UserProfilePage extends StatelessWidget {
         children: <Widget>[
           _ItemCorreo("E-mail",_mail),
           _ItemCorreo("Number",_number),
-        ],
-      ),
-    );
-  }
-  Widget _containerOpciones(){
-    return Container(
-      height: 120.0,
-      margin: EdgeInsets.only(top: 8.0),
-      decoration: BoxDecoration(
-//        color: Color(0xFFEFF4F7),
-      ),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children: <Widget>[
-          _ItemHeader("OPTIONS"),
-          _ItemBody("Coupons"),
-          _ItemBody("Messages"),
-          _ItemBody("Reservations"),
-          _ItemBody("Favs"),
-        ],
-      ),
-    );
-  }
-  Widget _containerSettings(){
-    return Container(
-      height: 120.0,
-      margin: EdgeInsets.only(top: 8.0),
-      decoration: BoxDecoration(
-//        color: Color(0xFFEFF4F7),
-      ),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children: <Widget>[
-          _ItemHeader("SETTINGS"),
-          _ItemBody("Edit Profile"),
-          _ItemBody("Notifications"),
         ],
       ),
     );
@@ -242,10 +173,7 @@ class UserProfilePage extends StatelessWidget {
                     SizedBox(height: screenSize.height / 3.8),
                     _profileImage(),
                     _namaewa(),
-//                    _email(context),
                     _containerEmail(),
-//                    _containerOpciones(),
-//                    _containerSettings(),
                   SizedBox(height: 10.0),
                     _logOutButton(),
                   ],
